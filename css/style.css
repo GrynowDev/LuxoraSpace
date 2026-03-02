@@ -1,0 +1,1938 @@
+:root {
+    --primary-color: #eb595f;
+    /* Livspace-like accents */
+    --secondary-color: #2c3e50;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --light-bg: #f8f9fa;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+}
+
+/* Responsive Navbar Styles */
+.navbar-brand,
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    text-decoration: none;
+}
+
+.navbar,
+ul.dropdown-menu>li>span {
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.nav-link,
+ul.dropdown-menu>li>span {
+    text-transform: capitalize;
+    list-style: none;
+    color: #111822;
+}
+
+.navbar-nav .primary-btn,
+.primary-btn {
+    text-align: center;
+    font-family: var(--font-heading);
+}
+
+.navbar,
+.navbar-nav .primary-btn,
+.primary-btn {
+    font-family: var(--font-heading);
+}
+
+.navbar.sticky {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+#vidzy-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar>.container,
+.navbar>.container-fluid {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    white-space: nowrap;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-toggler {
+        transition: none;
+    }
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem;
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+ul.second-level-menu {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #e1d8f1;
+}
+
+ul.second-level-menu>li {
+    list-style: none;
+}
+
+ul.dropdown-menu>li>span {
+    cursor: auto;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    display: flex;
+    border-top: 1px solid #e4d9fb;
+    align-items: center;
+}
+
+ul.second-level-menu>li>a {
+    border-bottom: 1px solid #dacbf3 !important;
+}
+
+ul.second-level-menu>li:last-child>a {
+    border: none !important;
+}
+
+ul.dropdown-menu>li>span:after {
+    display: inline-block;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    margin-left: auto;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0.55);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar {
+    background-color: #fff !important;
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    width: auto;
+    min-height: 40.84px;
+    display: block;
+}
+
+.navbar-toggler {
+    border-radius: 0.75rem;
+    outline: 0;
+    box-shadow: none;
+}
+
+.navbar-collapse {
+    padding: 0 0 50px;
+    min-height: 100%;
+    height: 100vh;
+    top: -100vh;
+    right: 0;
+    overflow-y: scroll;
+    opacity: 0;
+    z-index: 2000;
+    transition: 0.15s ease-out;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background-color: #fff;
+}
+
+.dropdown-item,
+.nav-link {
+    padding: 15px 25px;
+    font-weight: 500;
+}
+
+.nav-link,
+.navbar-nav .primary-btn {
+    transition: 0.5s;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar-collapse.show {
+    display: block;
+    opacity: 1;
+    top: 0;
+    transition: 0.15s ease-out;
+}
+
+.menu-close {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 10px 15px 10px auto;
+    cursor: pointer;
+}
+
+.menu-close span {
+    position: absolute;
+    top: 25px;
+    display: block;
+}
+
+.menu-close span:after,
+.menu-close span:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background: #000;
+}
+
+.menu-close span:before {
+    transform: rotate(-45deg);
+}
+
+.menu-close span:after {
+    transform: rotate(45deg);
+}
+
+.nav-link {
+    font-size: 1rem;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    display: flex;
+    border-top: 1px solid #e4d9fb;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-nav .primary-btn {
+    margin: 15px 25px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-size: 20px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    border: none;
+}
+
+.navbar-nav .primary-btn:hover {
+    background-color: #d6454b;
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.55);
+    color: #111822;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+
+.nav-tabs .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.navbar-light .navbar-nav li.nav-item:last-child,
+.stats-block {
+    border-top: 1px solid #eee;
+}
+
+.navbar-nav .dropdown-menu {
+    position: static;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid #e4d9fb;
+    background-color: #f2ebff;
+}
+
+.dropdown-toggle::after {
+    margin-left: auto;
+}
+
+.dropdown-item {
+    border-top: 1px solid #e4d9fb;
+}
+
+.navbar-nav .dropdown-menu li:first-child span {
+    border: 0;
+}
+
+/* Dropdown Header Styling - using span for headers */
+.dropdown-menu li span {
+    cursor: auto;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    padding: 15px 25px;
+    margin: 0;
+    border-top: 1px solid #e4d9fb;
+    background-color: transparent;
+    display: block;
+    opacity: 0.7;
+}
+
+.dropdown-menu li:first-child span {
+    border-top: none;
+}
+
+/* Dropdown items styling */
+.sec-btn {
+    padding: 12px 25px;
+    color: #111822;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-top: 1px solid #e4d9fb;
+}
+
+.sec-btn:hover {
+    background-color: rgba(235, 89, 95, 0.1);
+    color: var(--primary-color);
+    padding-left: 30px;
+}
+
+/* Dropdown Toggle Arrow */
+.dropdown-toggle::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.5em;
+    vertical-align: 0.255em;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.nav-item.dropdown.menu-open .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Show dropdown menu when menu-open class is active */
+.nav-item.dropdown.menu-open .dropdown-menu {
+    display: block !important;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    #vidzy-navbar {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    .navbar-collapse {
+        position: relative;
+        height: auto;
+        top: auto;
+        opacity: 1;
+        overflow: visible;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-link {
+        border-top: none;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        min-width: 600px;
+        padding: 1.5rem;
+        margin-top: 0.5rem;
+        background-color: #fff;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 2rem;
+    }
+
+    .dropdown-menu li span {
+        grid-column: 1 / -1;
+        border-top: none;
+        padding-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .dropdown-menu li:first-child span {
+        margin-top: 0;
+    }
+
+    .sec-btn {
+        border-top: none;
+        padding: 0.5rem 0;
+    }
+
+    .menu-close {
+        display: none;
+    }
+
+    .navbar-nav .primary-btn {
+        margin: 0 0 0 1rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Scrolled Navbar */
+#vidzy-navbar.navbar-scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #d6454b;
+    border-color: #d6454b;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-family: var(--font-body);
+    /* Modern brand look */
+    letter-spacing: 1px;
+}
+
+.navbar-brand img {
+    height: 60px;
+    /* Adjust logo size */
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    /* Increased height for better impact */
+    min-height: 600px;
+    background: #000;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 6s ease;
+}
+
+.carousel-item.active .hero-image {
+    transform: scale(1.1);
+    /* Zoom effect on active slide */
+}
+
+/* Old style removed: hero-image-container, zoomHero animation */
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+/* Carousel Caption Override */
+.carousel-caption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    height: 100%;
+}
+
+.bg-dark-glass {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+
+.hero-content {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Services */
+.section-padding {
+    padding: 80px 0;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(235, 89, 95, 0.1);
+    /* light primary */
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.service-card:hover .icon-box {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Inspiration Grid */
+.inspiration-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.inspiration-card:hover {
+    transform: scale(1.02);
+}
+
+.inspiration-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(33, 37, 41, 0.85);
+    /* Dark background similar to ref */
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.inspiration-card:hover .inspiration-label {
+    background: var(--primary-color);
+}
+
+/* Projects */
+.carousel-item {
+    min-height: 500px;
+}
+
+.spacing-2 {
+    letter-spacing: 2px;
+}
+
+/* Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Video Card */
+.video-card {
+    min-width: 200px;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #000;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    opacity: 0.9;
+}
+
+.video-card:hover video {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.gradient-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    transition: all 0.3s ease;
+}
+
+.video-card:hover .gradient-overlay {
+    padding-bottom: 2rem !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+}
+
+/* Why Choose Us / Stats */
+.stats-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+    border-color: var(--primary-color);
+}
+
+.icon-blob {
+    width: 80px;
+    height: 80px;
+    background-color: #2a2a2a;
+    /* Dark background for dark theme */
+    border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+    /* Organic blob shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    position: relative;
+}
+
+.icon-blob i {
+    font-size: 2rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.badge-float {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff4d4d;
+    /* Red accent */
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(255, 77, 77, 0.4);
+}
+
+/* Footer */
+.hover-white:hover {
+    color: #fff !important;
+}
+
+/* Animations */
+.hover-card {
+    transition: transform 0.3s;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Service Link */
+.service-link {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    color: #d6454b;
+}
+
+.service-link i {
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Service Detail Page Styles */
+.image-overlay-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 29, 29, 0.64);
+    background-position: center center;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    z-index: 1;
+}
+
+.bg-attach-fixed {
+    background-attachment: fixed;
+    padding: 10em 2em 6em 2em;
+    /* Adjusted padding for better vertical spacing like the ref */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    background-image: url('../assets/images/hero.png');
+    /* Using available image */
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bg-attach-fixed .content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-section h3,
+h5 {
+    color: #ccc;
+}
+
+/* Detail Grid adjustments if needed */
+/* Page specific hero overrides */
+.service-hero-interior {
+    background-image: url('../assets/images/service1.png') !important;
+}
+
+.service-hero-elevation {
+    background-image: url('../assets/images/service2.png') !important;
+}
+
+.service-hero-2d {
+    background-image: url('../assets/images/2d-floor-plans.jpeg') !important;
+}
+
+.service-hero-3d {
+    background-image: url('../assets/images/3d-plan-layout.jpeg') !important;
+}
+
+.service-hero-landscaping {
+    background-image: url('../assets/images/landscaping-design.jpeg') !important;
+}
+
+.service-hero-commercial {
+    background-image: url('../assets/images/commercials.jpeg') !important;
+}
+
+/* Experience Banner Styles */
+.experience-banner {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .experience-banner {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.experience-content {
+    background-color: #4D314D;
+    /* Deep Purple from ref */
+    padding: 2rem 4rem;
+    position: relative;
+    z-index: 2;
+    color: white;
+    flex: 1;
+    /* Grow to fill space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-content h2 {
+    color: white;
+    font-size: 2.4rem;
+}
+
+/* The curve effect */
+@media (min-width: 992px) {
+    .experience-content {
+        flex: 0 0 55%;
+        /* Take up 55% width approx */
+        border-radius: 0;
+        /* Reset */
+    }
+
+    .experience-content::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -100px;
+        width: 200px;
+        height: 100%;
+        background-color: #4D314D;
+        border-radius: 50%;
+        transform: scaleX(0.6);
+        /* Compress width to make curve gentler */
+        z-index: -1;
+    }
+}
+
+.experience-image {
+    background-image: url('../assets/images/service1.png');
+    /* Placeholder */
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Specific text styling */
+.text-salmon {
+    color: #EB5E5E;
+}
+
+.btn-salmon {
+    background-color: #EB5E5E;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-salmon:hover {
+    background-color: #d44a4a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    background-color: #1a1a1a;
+    /* Dark background */
+}
+
+.faq-header {
+    color: #fff;
+    /* White text for dark background */
+}
+
+.accordion-item {
+    border: none;
+    border-radius: 8px !important;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background-color: #2a2a2a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-button {
+    font-weight: 500;
+    color: #fff;
+    background-color: #2a2a2a;
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    box-shadow: none !important;
+    /* Remove default blue glow */
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #2a2a2a;
+    /* Keep dark background even when open */
+    font-weight: 600;
+}
+
+.accordion-button::after {
+    /* Custom + icon instead of chevron if preferred, or stylize the chevron */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/%3e%3c/svg%3e");
+    transition: transform 0.2s ease-in-out;
+    filter: brightness(0) invert(1);
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/%3e%3c/svg%3e");
+    /* Rotate to become a minus if using plus, or just standard chevron behavior */
+    transform: rotate(180deg);
+    filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+    padding: 1rem 1.5rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    background-color: #2a2a2a;
+}
+
+/* Dark Mode Styling */
+body {
+    background-color: #0f0f0f;
+}
+
+/* Project Carousel Dark Background */
+#projects .carousel-item .bg-dark {
+    background-color: #1a1a1a !important;
+}
+
+/* Ensure service card body text is visible on dark background */
+#services .service-card .card-body {
+    background-color: #1a1a1a;
+}
+
+#services .service-card .card-body h4,
+#services .service-card .card-body p {
+    color: #fff;
+}
+
+/* Project Carousel Navigation Fix */
+#projectCarousel .carousel-control-prev,
+#projectCarousel .carousel-control-next {
+    width: 5%;
+    /* Detailed control width */
+    opacity: 1;
+    /* Always visible */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 992px) {
+    #projectCarousel .carousel-control-prev {
+        left: -80px;
+        /* Move outside left */
+    }
+
+    #projectCarousel .carousel-control-next {
+        right: -80px;
+        /* Move outside right */
+    }
+}
+
+/* Mobile adjustment */
+@media (max-width: 991px) {
+    #projectCarousel .carousel-control-prev {
+        left: 10px;
+    }
+
+    #projectCarousel .carousel-control-next {
+        right: 10px;
+    }
+}
+
+/* Icon refinement */
+#projectCarousel .carousel-control-prev-icon,
+#projectCarousel .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-size: 50%;
+    /* Retain the bg-dark class from HTML but ensure sizing */
+}
+
+/* Navbar Dropdown Hover & Styling */
+
+/* Default Bootstrap Dropdown adjustments */
+.navbar-nav .dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 10px;
+    /* Spacing from nav item */
+}
+
+/* Desktop Hover Behavior */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        animation: fadeIn 0.1s ease-in;
+    }
+
+    .dropdown-menu {
+        width: 600px;
+        /* Mega menu width */
+        left: 50%;
+        transform: translateX(-50%);
+        /* Center relative to parent if position is relative, but usually needs adjustment */
+    }
+
+    /* Ensure the parent is relative for positioning */
+    .nav-item.dropdown {
+        position: relative;
+    }
+
+    /* Center the dropdown relative to the nav item */
+    .dropdown-menu {
+        left: 0;
+        transform: none;
+    }
+}
+
+/* Two Column Layout for Desktop */
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 0;
+    font-weight: 400;
+    color: var(--text-dark);
+    transition: color 0.2s;
+    background: transparent !important;
+    /* Remove blue bg on hover */
+}
+
+.dropdown-item:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+    /* Subtle movement */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Styling */
+@media (max-width: 991px) {
+    .dropdown-menu {
+        width: 100%;
+        box-shadow: none;
+        padding: 0 1rem;
+        background-color: #f8f9fa;
+        /* Slightly darker bg for nested feel */
+        margin-top: 0;
+    }
+
+    .dropdown-grid {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+        gap: 0.5rem;
+    }
+
+    .dropdown-item {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* Chevron Rotation on Link */
+.nav-link.dropdown-toggle::after {
+    transition: transform 0.2s;
+}
+
+.nav-item.dropdown:hover .nav-link.dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Navigation Styles for Floating vs Fixed States */
+
+/* Base Transition Class */
+.transition-all {
+    transition: all 0.4s ease-in-out;
+    padding-top: 20px;
+    /* Initial top spacing */
+}
+
+/* Floating State (Default) */
+#mainNav .navbar-container {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Scrolled State (Added via JS) */
+.navbar-scrolled {
+    padding-top: 0 !important;
+    /* Dark background */
+}
+
+.navbar-scrolled .navbar-container {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.navbar-scrolled .container {
+    max-width: 1320px;
+    /* Bootstrap XL container manually if width:100% breaks alignment */
+}
+
+/* Text Color Updates on Scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand span {
+    color: white !important;
+}
+
+.navbar-scrolled .nav-link:hover,
+.navbar-scrolled .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Button Update on Scroll */
+.navbar-scrolled .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+/* Mobile Toggler White on Dark */
+.navbar-scrolled .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* REVISED Navigation Styles for Transparent -> White Pill Scroll Effect */
+
+/* Default State (Top of Page) */
+#mainNav {
+    padding-top: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+#mainNav .navbar-container {
+    background-color: transparent;
+    /* No background initially */
+    box-shadow: none;
+    padding: 1rem 0;
+    /* Relaxed padding */
+    transition: all 0.4s ease-in-out;
+}
+
+/* Default Text Colors (White for Dark Hero) */
+#mainNav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+    color: #fff !important;
+    /* Bright white on hover */
+}
+
+/* Portfolio Page Styles */
+.portfolio-header-section {
+    padding-top: 151px;
+    padding-bottom: 52px;
+}
+
+.portfolio-img-container {
+    overflow: hidden;
+    /* border-radius: 4px; Optional */
+}
+
+.portfolio-img-container img {
+    transition: transform 0.6s ease;
+    height: 400px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+}
+
+.portfolio-item:hover .portfolio-img-container img {
+    transform: scale(1.05);
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+#mainNav .navbar-brand span {
+    color: #fff !important;
+    /* White logo text initially */
+}
+
+#mainNav .btn-primary {
+    background-color: #fff;
+    color: var(--primary-color);
+    border-color: #fff;
+}
+
+#mainNav .navbar-toggler-icon {
+    filter: invert(1);
+    /* White toggler for dark background */
+}
+
+/* --------------------------------------------------------- */
+/* Scrolled State (White Pill Look) */
+/* --------------------------------------------------------- */
+.navbar-scrolled {
+    padding-top: 15px !important;
+}
+
+.navbar-scrolled .navbar-container {
+    background-color: #fff !important;
+    /* Full rounded pill */
+    padding: 0.5rem 2rem !important;
+    /* Compact pill padding */
+    margin: 0 auto;
+    width: auto;
+    max-width: 95%;
+    /* Prevent touching edges */
+}
+
+/* Scrolled Text Colors (Black/Dark for White Pill) */
+.navbar-scrolled .nav-link {
+    color: var(--secondary-color) !important;
+}
+
+.navbar-scrolled .nav-link:hover,
+.navbar-scrolled .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar-scrolled .navbar-brand span {
+    color: var(--primary-color) !important;
+    /* Revert to brand color */
+}
+
+.navbar-scrolled .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.navbar-scrolled .navbar-toggler-icon {
+    filter: none;
+    /* Dark toggler for white background */
+}
+
+/* Fix Specificity for Scrolled Navbar Text */
+#mainNav.navbar-scrolled .nav-link {
+    color: var(--secondary-color) !important;
+}
+
+#mainNav.navbar-scrolled .nav-link:hover,
+#mainNav.navbar-scrolled .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+#mainNav.navbar-scrolled .navbar-brand span {
+    color: var(--primary-color) !important;
+}
+
+/* Ensure button text is visible if it inherits weirdly */
+#mainNav.navbar-scrolled .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff !important;
+}
+
+/* =========================================
+   Responsive Navigation Styles
+   ========================================= */
+
+/* --------------------------------------------------------- */
+/* DESKTOP STYLES (min-width: 992px)                         */
+/* Implements: Transparent Top -> White Pill Scroll Effect   */
+/* --------------------------------------------------------- */
+@media (min-width: 992px) {
+
+    /* 1. Base State (Top of Page) */
+    #mainNav {
+        padding-top: 25px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    #mainNav .navbar-container {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 1rem 0;
+        border-radius: 0;
+        width: 100%;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* Text Colors at Top (White for dark hero) */
+    #mainNav .nav-link {
+        color: rgba(255, 255, 255, 0.95) !important;
+        font-weight: 500;
+    }
+
+    #mainNav .nav-link:hover,
+    #mainNav .nav-link.active {
+        color: #fff !important;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    #mainNav .navbar-brand span {
+        color: #fff !important;
+    }
+
+    /* Button at Top (White variant) */
+    #mainNav .btn-primary {
+        background-color: #fff;
+        color: var(--primary-color);
+        border: 2px solid #fff;
+        font-weight: 600;
+    }
+
+    #mainNav .btn-primary:hover {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    /* 2. Scrolled State (White Pill) */
+    #mainNav.navbar-scrolled {
+        padding-top: 15px;
+    }
+
+    #mainNav.navbar-scrolled .navbar-container {
+        background-color: #ffffff !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 50px !important;
+        /* Pill shape */
+        padding: 0.5rem 2rem;
+        width: 1320px;
+        /* Shrink to fit content */
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    /* Scrolled Text Colors (Dark) */
+    #mainNav.navbar-scrolled .nav-link {
+        color: var(--secondary-color) !important;
+    }
+
+    #mainNav.navbar-scrolled .nav-link:hover,
+    #mainNav.navbar-scrolled .nav-link.active {
+        color: var(--primary-color) !important;
+        text-shadow: none;
+    }
+
+    #mainNav.navbar-scrolled .navbar-brand span {
+        color: var(--primary-color) !important;
+    }
+
+    #mainNav.navbar-scrolled .btn-primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        border: 2px solid var(--primary-color);
+    }
+
+    #mainNav.navbar-scrolled .btn-primary:hover {
+        background-color: #d6454b;
+        border-color: #d6454b;
+    }
+}
+
+/* --------------------------------------------------------- */
+/* MOBILE STYLES (max-width: 991px)                          */
+/* Implements: Transparent Top -> White Background on Scroll */
+/* --------------------------------------------------------- */
+@media (max-width: 991px) {
+
+    /* 1. Base State (Top of Page) */
+    #mainNav {
+        background-color: transparent;
+        /* Changed from white to transparent */
+        padding-top: 10px;
+        transition: background-color 0.3s ease;
+        box-shadow: none;
+    }
+
+    #mainNav .navbar-container {
+        padding: 0.5rem 0;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    /* Text Colors at Top (White for dark hero) */
+    #mainNav .nav-link {
+        color: rgba(255, 255, 255, 0.95) !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #mainNav .nav-link:hover,
+    #mainNav .nav-link.active {
+        color: #fff !important;
+    }
+
+    #mainNav .navbar-brand span {
+        color: #fff !important;
+    }
+
+    #mainNav .navbar-toggler-icon {
+        filter: invert(1);
+        /* White toggler */
+    }
+
+    #mainNav .btn-primary {
+        /* Keep button consistent */
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* 2. Scrolled State (Solid White) */
+    #mainNav.navbar-scrolled {
+        background-color: #ffffff;
+        /* Solid white on scroll */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding-top: 0;
+    }
+
+    #mainNav.navbar-scrolled .nav-link {
+        color: var(--secondary-color) !important;
+    }
+
+    #mainNav.navbar-scrolled .navbar-brand span {
+        color: var(--primary-color) !important;
+    }
+
+    #mainNav.navbar-scrolled .navbar-toggler-icon {
+        filter: none;
+        /* Dark toggler */
+    }
+
+    /* Mobile Dropdown Styling */
+    .navbar-collapse {
+        background: white;
+        /* Menu list always white background */
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Links inside the dropdown (collapse) should always be dark for readability against white menu bg */
+    #mainNav .navbar-collapse .nav-link {
+        color: var(--secondary-color) !important;
+    }
+
+    #mainNav .navbar-collapse .nav-link:hover {
+        color: var(--primary-color) !important;
+    }
+}
+
+/* Contact Hero Section Styles */
+.contact-hero-section {
+    position: relative;
+    background-image: url('../assets/images/hero.png');
+    /* Using existing hero image as base */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Darkening overlay for text legibility */
+    z-index: 1;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.contact-hero-title {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Form Card */
+.contact-form-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    margin-left: auto;
+    /* Push to right on desktop */
+}
+
+.contact-form-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form-input {
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.contact-form-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(235, 89, 95, 0.1);
+}
+
+.mobile-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.flag-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 16px;
+    /* Simplistic India flag representation for demo */
+    background: linear-gradient(to bottom, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+    border: 1px solid #eee;
+    z-index: 3;
+}
+
+.mobile-input-group input {
+    padding-left: 45px;
+    /* Space for flag */
+}
+
+/* WhatsApp Toggle */
+.whatsapp-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-check-input.usage-toggle {
+    width: 2.5em;
+    height: 1.25em;
+    cursor: pointer;
+    background-color: #ddd;
+    border-color: #ddd;
+}
+
+.form-check-input.usage-toggle:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-book-session {
+    background-color: #D9232D;
+    /* Red specific to reference */
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.btn-book-session:hover {
+    background-color: #b01a23;
+    color: white;
+}
+
+.free-tag {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 0.6rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px;
+    border-radius: 2px;
+    transform: rotate(180deg);
+}
+
+.privacy-text {
+    font-size: 0.7rem;
+    color: #777;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.privacy-text a {
+    color: #D9232D;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .contact-hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .contact-form-card {
+        margin: 0 auto;
+    }
+}
+
+/* Custom 5-Second Popup Modal Styles */
+.custom-modal-dialog {
+    max-width: 900px;
+    /* Wide modal */
+}
+
+.custom-modal-content {
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Left Side - Dark */
+.modal-left-panel {
+    background-color: #111;
+    /* Dark background */
+    color: white;
+    padding: 3rem;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: radial-gradient(circle at top right, #333 0%, transparent 40%);
+}
+
+.modal-left-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: white !important;
+    /* Force white text */
+}
+
+/* Logo Grid Mimic */
+.brand-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #555;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.brand-circle:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Right Side - White Form */
+.modal-right-panel {
+    background-color: white;
+    padding: 3rem;
+    flex: 1;
+    position: relative;
+}
+
+.btn-close-custom {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.btn-close-custom:hover {
+    color: #000;
+}
+
+.modal-form-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.modal-form-title span {
+    color: var(--primary-color);
+    /* Highlight color */
+}
+
+/* Form Inputs */
+.custom-input {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    height: 50px;
+    padding-left: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    color: #333;
+    width: 100%;
+}
+
+.custom-input:focus {
+    border-color: var(--primary-color);
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(235, 89, 95, 0.1);
+}
+
+.mobile-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.mobile-code {
+    width: 80px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: 500;
+}
+
+.btn-submit-popup {
+    background-color: #EB5E5E;
+    /* Match primary color */
+    color: white;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-submit-popup:hover {
+    background-color: #d6454b;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .custom-modal-content {
+        flex-direction: column;
+    }
+
+    .modal-left-panel {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .brand-grid {
+        justify-content: center;
+    }
+
+    .modal-right-panel {
+        padding: 2rem;
+    }
+}
