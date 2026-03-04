@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior Design | Interiro</title>
+    <meta name="description" content="Luxora Spaces interior design service transforms living rooms, bedrooms, kitchens, and whole homes with custom concepts, materials, and execution support.">
+    <title>Interior Design Service | Luxora Spaces</title>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- Bootstrap CSS -->
@@ -21,33 +23,12 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <span class="text-primary fw-bold">INTERIRO</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a href="index.html#contact" class="btn btn-primary rounded-pill px-4">Get a Quote</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header-wrapper"></div>
 
     <!-- Detail Hero Section -->
     <section class="bg-attach-fixed service-hero-interior">
@@ -75,94 +56,165 @@
         </div>
     </section>
 
-    <!-- Inspiration Grid Section -->
+    <!-- Inspiration Gallery with Tabs -->
     <section class="section-padding pt-0 bg-white">
         <div class="container">
-            <div class="row g-3">
-                <!-- Row 1 -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
-                        <img src="assets/images/hero2.png" alt="Kids Room" class="card-img w-100 object-fit-cover"
-                            style="height: 260px;">
-                        <div class="inspiration-label">Kids Room</div>
-                    </div>
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between mb-4 gap-3">
+                <div class="text-start">
+                    <h2 class="h3 mb-1 text-dark font-serif">Interior Inspiration Gallery</h2>
+                    <p class="text-muted small mb-0">Browse all spaces or filter by room type.</p>
                 </div>
+                <ul class="nav nav-pills interior-tabs" id="interiorTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" type="button" data-filter="all">All</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" type="button" data-filter="bedroom">Bedrooms</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" type="button" data-filter="kitchen">Kitchens</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" type="button" data-filter="dining">Dining Rooms</button>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="col-lg-3 col-md-6">
+            <div class="row g-3 interior-gallery">
+                <!-- Bedrooms -->
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="bedroom">
                     <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
-                        <img src="assets/images/hero3.png" alt="Home Office" class="card-img w-100 object-fit-cover"
-                            style="height: 260px;">
-                        <div class="inspiration-label">Home Office</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
-                        <img src="assets/images/service1.png" alt="Guest Bedroom"
+                        <img src="assets/images/interior-design/bedroom/bedroom.png" alt="Warm Neutral Bedroom"
                             class="card-img w-100 object-fit-cover" style="height: 260px;">
-                        <div class="inspiration-label">Guest Bedroom</div>
+                        <div class="inspiration-label">Warm Neutral Bedroom</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="bedroom">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/bedroom/bedroom2.png" alt="Modern Master Suite"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Modern Master Suite</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="bedroom">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/bedroom/bedroom3.png" alt="Cozy Guest Room"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Cozy Guest Room</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="bedroom">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/bedroom/bedroom4.png" alt="Soft Lighting Bedroom"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Soft Lighting Bedroom</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="bedroom">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/bedroom/bedroom5.png" alt="Luxury Suite Detail"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Luxury Suite Detail</div>
                     </div>
                 </div>
 
-                <!-- Row 2 -->
-                <div class="col-lg-3 col-md-6">
+                <!-- Kitchens -->
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="kitchen">
                     <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
-                        <img src="assets/images/hero2.png" alt="Foyer" class="card-img w-100 object-fit-cover"
-                            style="height: 260px;">
-                        <div class="inspiration-label">Foyer</div>
+                        <img src="assets/images/interior-design/kitchen/Gemini_Generated_Image_8kx0wa8kx0wa8kx0.png"
+                            alt="Modern Island Kitchen" class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Modern Island Kitchen</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="kitchen">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/kitchen/Gemini_Generated_Image_kbkivvkbkivvkbki.png"
+                            alt="Elegant Modular Kitchen" class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Elegant Modular Kitchen</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="kitchen">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/kitchen/Gemini_Generated_Image_r7fb6ar7fb6ar7fb.png"
+                            alt="Warm Wood Kitchen" class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Warm Wood Kitchen</div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12">
+                <!-- Dining -->
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="dining">
                     <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
-                        <img src="assets/images/hero.png" alt="Dining Room" class="card-img w-100 object-fit-cover"
-                            style="height: 260px;">
-                        <div class="inspiration-label">Dining Room</div>
+                        <img src="assets/images/interior-design/dining/dining1.png" alt="Contemporary Dining"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Contemporary Dining</div>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="dining">
                     <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
-                        <img src="assets/images/service2.png" alt="Bathroom" class="card-img w-100 object-fit-cover"
-                            style="height: 260px;">
-                        <div class="inspiration-label">Bathroom</div>
+                        <img src="assets/images/interior-design/dining/dining2.png" alt="Minimal Dining Nook"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Minimal Dining Nook</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="dining">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/dining/dining3.png" alt="Luxury Dining Setup"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Luxury Dining Setup</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="dining">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/dining/dining4.png" alt="Cozy Family Dining"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Cozy Family Dining</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="dining">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/dining/dining5.png" alt="Open Plan Dining"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Open Plan Dining</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 interior-gallery-item" data-category="dining">
+                    <div class="inspiration-card card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="assets/images/interior-design/dining/dining6.png" alt="Statement Lighting Dining"
+                            class="card-img w-100 object-fit-cover" style="height: 260px;">
+                        <div class="inspiration-label">Statement Lighting Dining</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row g-4 mb-5">
-                <div class="col-lg-4 col-md-6">
-                    <h3 class="fw-bold mb-4">INTERIRO</h3>
-                    <p class="text-white-50">Your trusted partner in creating beautiful, functional, and personalized
-                        spaces. Bringing your vision to life.</p>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="fw-bold mb-4">Quick Links</h5>
-                    <ul class="list-unstyled text-white-50">
-                        <li class="mb-2"><a href="index.html#home"
-                                class="text-decoration-none text-white-50 hover-white">Home</a></li>
-                        <li class="mb-2"><a href="index.html#about"
-                                class="text-decoration-none text-white-50 hover-white">About Us</a></li>
-                        <li class="mb-2"><a href="index.html#services"
-                                class="text-decoration-none text-white-50 hover-white">Services</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="border-secondary">
-            <div class="text-center text-white-50 small">
-                &copy; 2024 Interiro. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
 
-
+    <div id="footer-wrapper"></div>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/loadComponent.js"></script>
+    <script>
+        // Simple tab filtering for interior gallery
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('#interiorTabs [data-filter]');
+            const items = document.querySelectorAll('.interior-gallery-item');
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    items.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        const show = filter === 'all' || category === filter;
+                        item.classList.toggle('d-none', !show);
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for contacting Luxora Spaces. Our interior design team has received your enquiry and will reach out within 24 hours.">
+  <title>Thank You | Luxora Spaces</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .thankyou-section {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .thankyou-card {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 24px;
+      padding: 60px 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    @media (max-width: 576px) {
+      .thankyou-card { padding: 40px 24px; }
+    }
+    .thankyou-icon {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: rgba(212,175,55,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 48px; color: var(--teal);
+      animation: scaleIn 0.5s ease-out;
+    }
+    @keyframes scaleIn {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .thankyou-card h1 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800; color: #e0e0e0;
+      margin-bottom: 16px;
+    }
+    .thankyou-card h1 span { color: var(--teal); }
+    .thankyou-card p {
+      font-size: 15px; color: #b0b0b0;
+      line-height: 1.7; margin-bottom: 32px;
+    }
+    .thankyou-info {
+      background: #0f0f0f;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+    .thankyou-info-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .thankyou-info-item:last-child { border-bottom: none; }
+    .thankyou-info-item i {
+      font-size: 18px; color: var(--teal); min-width: 24px;
+    }
+    .thankyou-info-item span {
+      font-size: 14px; color: #b0b0b0;
+    }
+    .thankyou-actions {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      justify-content: center; margin-top: 32px;
+    }
+    .thankyou-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 8px;
+      text-decoration: none; font-weight: 700; font-size: 15px;
+      font-family: 'Work Sans', sans-serif;
+      transition: all 0.3s;
+    }
+    .thankyou-btn-primary {
+      background: var(--teal); color: #fff;
+    }
+    .thankyou-btn-primary:hover {
+      background: var(--teal-light); color: #fff;
+      transform: translateY(-2px);
+    }
+    .thankyou-btn-secondary {
+      background: transparent;
+      border: 1px solid #2a2a2a; color: #b0b0b0;
+    }
+    .thankyou-btn-secondary:hover {
+      border-color: var(--teal); color: var(--teal);
+    }
+    .thankyou-social {
+      margin-top: 40px; padding-top: 32px;
+      border-top: 1px solid #2a2a2a;
+    }
+    .thankyou-social p {
+      font-size: 13px; color: #888; margin-bottom: 16px;
+    }
+    .thankyou-social-links {
+      display: flex; gap: 12px; justify-content: center;
+    }
+    .thankyou-social-links a {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      display: flex; align-items: center; justify-content: center;
+      color: #b0b0b0;
+      font-size: 18px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .thankyou-social-links a:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-wrapper"></div>
+
+  <section class="thankyou-section">
+    <div class="thankyou-card">
+      <div class="thankyou-icon">
+        <i class="bi bi-check-circle-fill"></i>
+      </div>
+      <h1>Thank You for <span>Reaching Out!</span></h1>
+      <p>Your message has been successfully received. Our design team will review your inquiry and get back to you within <strong>24 hours</strong>.</p>
+
+      <div class="thankyou-info">
+        <div class="thankyou-info-item">
+          <i class="bi bi-envelope-check-fill"></i>
+          <span>Confirmation email sent to your inbox</span>
+        </div>
+        <div class="thankyou-info-item">
+          <i class="bi bi-clock-fill"></i>
+          <span>Expected response time: 24 hours</span>
+        </div>
+        <div class="thankyou-info-item">
+          <i class="bi bi-phone-fill"></i>
+          <span>Or call us directly: <strong style="color:#e0e0e0;">+91 7417664352</strong></span>
+        </div>
+      </div>
+
+      <div class="thankyou-actions">
+        <a href="index.html" class="thankyou-btn thankyou-btn-primary">
+          <i class="bi bi-house-fill"></i> Back to Home
+        </a>
+        <a href="about.html" class="thankyou-btn thankyou-btn-secondary">
+          <i class="bi bi-info-circle-fill"></i> Learn More
+        </a>
+      </div>
+
+      <div class="thankyou-social">
+        <p>Follow us on social media for design inspiration</p>
+        <div class="thankyou-social-links">
+          <a href="https://www.instagram.com/luxoraspaces" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/luxoraspaces" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://wa.me/917417664352" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/luxoraspaces" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-wrapper"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/loadComponent.js"></script>
+</body>
+</html>

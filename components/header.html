@@ -1,0 +1,84 @@
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="../assets/images/logo.png" alt="Luxora Spaces" style="height: 90px; width: auto;">
+    </a>
+    <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center m-auto">
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service <i class="bi bi-chevron-down ms-1"></i></a>
+          <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
+            <li><a class="dropdown-item" href="service-interior-design.html">Interior Design</a></li>
+            <li><a class="dropdown-item" href="service-3d-elevation.html">3D Elevation Design</a></li>
+            <li><a class="dropdown-item" href="service-2d-floor-plans.html">2D Floor Plans</a></li>
+            <li><a class="dropdown-item" href="service-3d-plan-layout.html">3D Plan Layout</a></li>
+            <li><a class="dropdown-item" href="service-commercial.html">Commercial Designs</a></li>
+            <li><a class="dropdown-item" href="service-landscaping.html">Landscaping</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Gallery</a></li>
+      </ul>
+      <div class="nav-actions d-flex ms-lg-auto">
+        <a href="contact.html" class="nav-btn-contact">Contact Us</a>
+        <a href="tel:+917417664352" class="nav-btn-phone"><i class="bi bi-telephone-fill"></i> +91 7417664352</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Close Bootstrap collapse when resizing to desktop (fixes mobile menu staying open)
+  const navbarCollapse = document.getElementById('navbarNav');
+  const navbarToggler = document.querySelector('#navbar .navbar-toggler');
+  if (navbarCollapse && navbarToggler) {
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Desktop: Service dropdown opens on hover. Mobile: click (Bootstrap default).
+  const serviceDropdown = document.querySelector('#navbar .nav-item.dropdown');
+  if (serviceDropdown) {
+    const dropdownToggle = serviceDropdown.querySelector('[data-bs-toggle="dropdown"]');
+    let hoverTimer;
+    function isDesktop() { return window.innerWidth >= 992; }
+    serviceDropdown.addEventListener('mouseenter', () => {
+      clearTimeout(hoverTimer);
+      if (isDesktop()) bootstrap.Dropdown.getOrCreateInstance(dropdownToggle).show();
+    });
+    serviceDropdown.addEventListener('mouseleave', () => {
+      if (!isDesktop()) return;
+      hoverTimer = setTimeout(() => bootstrap.Dropdown.getOrCreateInstance(dropdownToggle).hide(), 150);
+    });
+  }
+
+  // Sticky nav shadow
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 20) {
+      nav.style.boxShadow = '0 2px 30px rgba(255,255,255,0.15)';
+      nav.style.background = 'rgba(10,10,10,0.98)';
+    } else {
+      nav.style.boxShadow = '0 1px 20px rgba(255,255,255,0.08)';
+      nav.style.background = 'rgba(10,10,10,0.97)';
+    }
+  });
+</script>
+
+<!-- Floating WhatsApp & Back to Top -->
+<div class="floating-buttons">
+  <a href="https://wa.me/917417664352" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <a href="#" class="floating-btn floating-btn-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </a>
+</div>

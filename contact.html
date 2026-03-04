@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Luxora Spaces to book a free interior design consultation, discuss your project requirements, or get quotes for 2D plans, 3D designs, and full home interiors.">
+  <title>Contact Us | Luxora Spaces</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .contact-page-hero {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+    .contact-page-hero h1 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .contact-page-hero h1 span { color: var(--teal); }
+    .contact-page-hero p {
+      font-size: 16px;
+      color: #b0b0b0;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .contact-info-cards {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    /* Left contact panel styled like reference image */
+    .contact-info-panel {
+      background: radial-gradient(circle at top left, rgba(212,175,55,0.15), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(255,255,255,0.04), transparent 60%),
+                  #141414;
+      border-radius: 24px;
+      padding: 40px 32px;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+    }
+    .contact-info-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #f9fafb;
+      margin-bottom: 8px;
+    }
+    .contact-info-sub {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 24px;
+    }
+    .contact-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+    }
+    .contact-info-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(15,23,42,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal);
+      font-size: 16px;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+    .contact-info-text-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #9ca3af;
+      margin-bottom: 2px;
+    }
+    .contact-info-text-main {
+      font-size: 14px;
+      color: #e5e7eb;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .contact-info-text-main a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+    .contact-info-text-main a:hover {
+      color: var(--teal);
+    }
+
+    /* Contact Info Cards */
+    .contact-info-section {
+      background: #0a0a0a;
+      padding: 60px 0;
+    }
+    .info-card {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+    }
+    .info-card:hover {
+      border-color: var(--teal);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(212,175,55,0.15);
+    }
+    .info-card-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: rgba(212,175,55,0.12);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 26px;
+      color: var(--teal);
+    }
+    .info-card h4 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 18px; font-weight: 700;
+      color: #e0e0e0; margin-bottom: 10px;
+    }
+    .info-card p, .info-card a {
+      font-size: 14px; color: #b0b0b0;
+      text-decoration: none; line-height: 1.7;
+    }
+    .info-card a:hover { color: var(--teal); }
+
+    /* Form Section */
+    .contact-form-section {
+      background: #111;
+      padding: 80px 0;
+    }
+    .contact-form-wrap {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px;
+      padding: 48px 40px;
+    }
+    @media (max-width: 576px) {
+      .contact-form-wrap { padding: 32px 20px; }
+    }
+    .contact-form-wrap h2 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700; color: #e0e0e0;
+      margin-bottom: 8px;
+    }
+    .contact-form-wrap .sub {
+      font-size: 14px; color: #888; margin-bottom: 32px;
+    }
+    .cf-label {
+      font-size: 13px; font-weight: 600;
+      color: #b0b0b0; margin-bottom: 6px;
+      display: block;
+    }
+    .cf-input {
+      width: 100%;
+      height: 50px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 0 16px;
+      font-size: 14px;
+      color: #111827;
+      font-family: 'Work Sans', sans-serif;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .cf-input::placeholder { color: #9ca3af; }
+    .cf-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(212,175,55,0.15); }
+    textarea.cf-input {
+      height: 130px;
+      padding: 14px 16px;
+      resize: vertical;
+    }
+    select.cf-input { appearance: none; cursor: pointer; }
+    .cf-submit {
+      width: 100%;
+      height: 52px;
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Work Sans', sans-serif;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cf-submit:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+    /* Map placeholder */
+    .map-section { background: #0a0a0a; padding: 0 0 80px; }
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-wrapper"></div>
+
+  <!-- Hero -->
+  <section class="contact-page-hero">
+    <div class="container">
+      <p class="section-tag" style="font-size:12px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Get In Touch</p>
+      <h1>Let's Build Your <span>Dream Space</span></h1>
+      <p>Talk to our design experts and get a free consultation for your home or office.</p>
+    </div>
+  </section>
+
+  <!-- Main Contact Section: Left info, right form -->
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <!-- Left: Address / contact details (single panel like reference) -->
+        <div class="col-lg-5">
+          <div class="contact-info-panel">
+            <h2 class="contact-info-title">Contact Information</h2>
+            <p class="contact-info-sub">Reach out to us directly via email, phone or WhatsApp, or fill out the form and our team will get back to you within 24 hours.</p>
+
+            <div class="contact-info-row">
+              <div class="contact-info-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div>
+                <div class="contact-info-text-title">Email</div>
+                <p class="contact-info-text-main">
+                  <a href="mailto:spacesluxora@gmail.com">spacesluxora@gmail.com</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-row">
+              <div class="contact-info-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div>
+                <div class="contact-info-text-title">Phone</div>
+                <p class="contact-info-text-main">
+                  <a href="tel:+917417664352">+91 7417664352</a><br/>
+                  Mon – Sat, 10 AM – 7 PM
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-row">
+              <div class="contact-info-icon">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div>
+                <div class="contact-info-text-title">WhatsApp</div>
+                <p class="contact-info-text-main">
+                  <a href="https://wa.me/917417664352" target="_blank" rel="noopener">Chat with us instantly</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-row">
+              <div class="contact-info-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div>
+                <div class="contact-info-text-title">Address</div>
+                <p class="contact-info-text-main">
+                  Luxora Spaces<br/>
+                  New Delhi, India
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="col-lg-7">
+          <div class="contact-form-wrap">
+            <h2>Send Us a Message</h2>
+            <p class="sub">Fill in the form below and our team will get back to you within 24 hours.</p>
+
+            <div id="cp-success" style="display:none; background:#d1fae5; color:#065f46; border-radius:8px; padding:14px 18px; margin-bottom:20px; font-size:14px; font-weight:600;">
+              ✅ Thank you! We'll contact you shortly.
+            </div>
+            <div id="cp-error" style="display:none; background:#fee2e2; color:#991b1b; border-radius:8px; padding:14px 18px; margin-bottom:20px; font-size:14px; font-weight:600;">
+              ❌ Something went wrong. Please try again.
+            </div>
+
+            <form id="contactPageForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="cf-label">Your Name *</label>
+                  <input id="cp-name" type="text" class="cf-input" placeholder="Enter your full name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="cf-label">Phone Number *</label>
+                  <input id="cp-phone" type="tel" class="cf-input" placeholder="Enter your mobile number" required>
+                </div>
+                <div class="col-12">
+                  <label class="cf-label">Email Address *</label>
+                  <input id="cp-email" type="email" class="cf-input" placeholder="your@email.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="cf-label">Message *</label>
+                  <textarea id="cp-message" class="cf-input" placeholder="Tell us about your project…" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" id="cpSubmitBtn" class="cf-submit">
+                    <span id="cpBtnText">Send Message</span>
+                    <i class="bi bi-send" id="cpBtnIcon"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.95109614596!2d76.76357148554327!3d28.644287349508655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1709559123456!5m2!1sen!2sin"
+          width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-wrapper"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/loadComponent.js"></script>
+  <script>
+    document.getElementById('contactPageForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      var name     = document.getElementById('cp-name').value.trim();
+      var phone    = document.getElementById('cp-phone').value.trim();
+      var email    = document.getElementById('cp-email').value.trim();
+      var message  = document.getElementById('cp-message').value.trim();
+
+      var successEl = document.getElementById('cp-success');
+      var errorEl   = document.getElementById('cp-error');
+
+      // Validation
+      if (!name || !phone || !email || !message) {
+        errorEl.textContent = '❌ Please fill in all required fields.';
+        errorEl.style.display = 'block';
+        successEl.style.display = 'none';
+        return;
+      }
+
+      // Email validation - basic regex to check valid email format
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errorEl.textContent = '❌ Please enter a valid email address.';
+        errorEl.style.display = 'block';
+        successEl.style.display = 'none';
+        return;
+      }
+
+      var btn     = document.getElementById('cpSubmitBtn');
+      var btnText = document.getElementById('cpBtnText');
+      var btnIcon = document.getElementById('cpBtnIcon');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+      btnIcon.className = 'bi bi-hourglass-split';
+
+      try {
+        var formData = new FormData();
+        formData.append('access_key',  'a3e5ca8b-c6e3-4b44-8d43-35b25937db4b');
+        formData.append('subject',     'New Contact Enquiry – ' + name);
+        formData.append('from_name',   'Luxora Spaces Website');
+        formData.append('name',        name);
+        formData.append('phone',       phone);
+        formData.append('email',       email);
+        formData.append('message',     message);
+
+        var res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+        var data = await res.json();
+
+        if (data.success) {
+          // Redirect to thank you page
+          window.location.href = 'thank-you.html';
+        } else {
+          throw new Error(data.message);
+        }
+      } catch(err) {
+        errorEl.textContent = '❌ Something went wrong. Please try again.';
+        errorEl.style.display = 'block';
+        successEl.style.display = 'none';
+        btnText.textContent = 'Send Message';
+        btnIcon.className   = 'bi bi-send';
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
